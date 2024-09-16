@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400&display=swap');
 
+/* Estilos generales para el cuerpo */
 body {
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(to right, #ff9a9e, #fecfef);
@@ -15,13 +16,14 @@ body {
     overflow-x: hidden;
 }
 
+/* Contenedor principal */
 .container {
     width: 90%;
     max-width: 900px;
     margin: 30px auto;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
+    border-radius: 20px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -34,6 +36,7 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Encabezado */
 .header {
     text-align: center;
     margin-bottom: 20px;
@@ -43,14 +46,9 @@ h1 {
     font-family: 'Alex Brush', cursive;
     color: #e91e63;
     margin: 0;
-    font-size: 36px;
+    font-size: 42px;
     animation: textGlow 2s ease-in-out infinite alternate;
-}
-
-@media (min-width: 768px) {
-    h1 {
-        font-size: 48px;
-    }
+    text-shadow: 0 0 5px #e91e63;
 }
 
 @keyframes textGlow {
@@ -58,6 +56,7 @@ h1 {
     to { text-shadow: 0 0 20px #ff6f91; }
 }
 
+/* Menú */
 .menu {
     margin: 20px 0;
 }
@@ -66,7 +65,6 @@ h1 {
     list-style: none;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
 }
@@ -92,44 +90,35 @@ h1 {
     transform: scale(1.05);
 }
 
-.content {
-    width: 100%;
-    margin-top: 20px;
-}
-
-iframe {
-    width: 100%;
-    height: 70vh;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
+/* Contenedor de la carta */
 .letter-container {
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 15px;
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     animation: slideIn 1.5s ease-out;
+    display: none; /* Ocultar todas las cartas por defecto */
 }
 
 @keyframes slideIn {
-    from { opacity: 0; transform: translateX(-30px); }
-    to { opacity: 1; transform: translateX(0); }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
+.letter-container:first-of-type {
+    display: block; /* Mostrar la primera carta por defecto */
+}
+
+/* Encabezado de cada carta */
 h2 {
     font-family: 'Alex Brush', cursive;
     color: #ff6f91;
     text-align: center;
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 15px;
-}
-
-@media (min-width: 768px) {
-    h2 {
-        font-size: 36px;
-    }
+    text-shadow: 0 0 5px #ff6f91;
 }
 
 p {
@@ -140,6 +129,7 @@ p {
     text-align: justify;
 }
 
+/* Estilo para la firma */
 .signature-container {
     display: flex;
     justify-content: flex-end;
@@ -151,40 +141,41 @@ p {
     font-size: 24px;
     color: #e91e63;
     white-space: pre;
+    text-align: right;
 }
 
-@media (max-width: 600px) {
-    .menu ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    iframe {
-        height: 60vh;
-    }
-}
-
-/* Estilos para los corazones flotantes */
+/* Corazones flotantes */
 .heart {
     position: absolute;
     color: #ff6f91;
     font-size: 24px;
     opacity: 0.7;
     animation: float 6s ease-in-out infinite;
-    pointer-events: none; /* Para evitar que los corazones interfieran con los clics */
+    pointer-events: none;
 }
 
 @keyframes float {
-    0% {
-        transform: translateY(0) scale(1);
-        opacity: 0.7;
+    0% { transform: translateY(0) scale(1); opacity: 0.7; }
+    50% { transform: translateY(-20px) scale(1.1); opacity: 0.9; }
+    100% { transform: translateY(0) scale(1); opacity: 0.7; }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
     }
-    50% {
-        transform: translateY(-20px) scale(1.1);
-        opacity: 0.9;
+
+    h1 {
+        font-size: 32px;
     }
-    100% {
-        transform: translateY(0) scale(1);
-        opacity: 0.7;
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .letter-container {
+        padding: 20px;
     }
 }

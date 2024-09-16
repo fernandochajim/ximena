@@ -20,21 +20,83 @@
             <h1>Cartas para mi Xime</h1>
             <nav class="menu">
                 <ul>
-                    <li><a href="#" onclick="loadLetter('carta-18-agosto-2024.html')">18 de Agosto de 2024</a></li>
-                    <li><a href="#" onclick="loadLetter('carta-09-septiembre-2024.html')">09 de Septiembre de 2024</a></li>
+                    <li><a href="#" onclick="showLetter('letter1')">18 de Agosto de 2024</a></li>
+                    <li><a href="#" onclick="showLetter('letter2')">09 de Septiembre de 2024</a></li>
                     <!-- Agregar más cartas aquí -->
                 </ul>
             </nav>
         </div>
 
-        <div class="content">
-            <iframe id="content-frame" src="carta-18-agosto-2024.html" frameborder="0"></iframe>
+        <!-- Contenedor para las cartas -->
+        <div id="letter1" class="letter-container">
+            <h2>18 de Agosto de 2024</h2>
+            <p>Xime,</p>
+            <p>No sé ni por dónde empezar porque hay tanto que quiero decirte, pero igual ahí te va, que ya es justo y necesario. Desde que empezamos a hablar bien, a encajar, algo en ti me atrapó de una manera que no puedo explicarme ni yo. No es solo que me gustes, es más profundo, es como si cada día que pasa, me gustaras más y más, fiel creyente de que eres mi otra mitad (o me hiciste un amarre). Y aunque creo que ya te lo he dicho antes, no me canso de repetirlo, a lo mejor te canso yo, pero: me gustas, y me gustas muchísimo.</p>
+            <p>Sé que somos diferentes en varias cosas, y que nuestros "love languages" no siempre coinciden, pero eso no me preocupa, en lo absoluto. Al contrario, me gusta que seamos distintos porque eso hace que esta como "conexión" sea más única. Tú tienes tu manera de ver y sentir el amor, y yo tengo la mía. A veces, soy más directo, te lo digo tal cual lo siento, pero entiendo que tú lo muestras de otras maneras, quizás con esos detalles que a otros se les pasarían, pero que yo noto y aprecio como no tienes idea. Y eso es lo que más me gusta de todo esto, que somos diferentes, pero nos complementamos siempre.</p>
+            <p>No puedo dejar de decirlo también: me encanta cómo me tiras hate. Puede sonar raro, pero esos comentarios sarcásticos, esas bromas que me tiras, son como una especie de lenguaje tuyo. Me divierte, me hace reír, y me hace sentir más cerca de ti. Nuevamente, es algo que valoro un montón.</p>
+            <p>Y la verdad, cada vez que paso por ti, no puedo evitar sonreír. Es automático. Te veo, y lo primero que me sale es decirte lo bien que te ves, aunque sé que a veces no me crees. Pero, lo digo porque es verdad, porque de verdad me impresionas cada vez que te veo. Y no es solo por fuera, todito de ti, es la forma en que haces tus gestos, el cómo hablas, cómo eres. Me haces feliz, y quiero que lo sepas, muy muy feliz.</p>
+            <p>Otra cosa que me hace quererte más es cómo te preocupas por mí. Sé que no siempre lo dices directamente, pero lo noto, Xime. Lo noto en esos gestos, en esas pequeñas cosas que haces para que esté bien. Y eso para mí significa mucho, porque no solo me demuestra que te importo, sino que también estás dispuesta a estar ahí para mí, y eso no es cualquier cosa. Lo valoro mucho, y más en estos momentos que andaba más chipi que nunca.</p>
+            <p>Sé que nuestra situación no es la más sencilla. Tenemos nuestras vidas, nuestras cosas, y a veces parece que el tiempo no alcanza, que vuela. Pero te prometo que no tengo prisa. Estoy dispuesto a esperar lo que sea necesario porque creo en lo que podemos llegar a ser. No me importa cuánto tiempo tome, lo que importa es que sea mutuo, y si llega en punto que no lo sea, te seguiré queriendo mucho mucho de lejitos por lo menos.</p>
+            <p>Y oye, si alguna vez hago algo que no te guste o si tienes alguna duda sobre algo, por favor dime. No quiero que te guardes nada, quiero que me digas todo lo que sientas. Estoy aquí para aclarar cualquier cosa o para cambiar lo que sea necesario. Lo que más me importa es que estés cómoda, que te sientas bien conmigo, y que podamos seguir adelante sin que nada se interponga entre nosotros.</p>
+            <p>Me gusta pensar que cada día que pasa, cada conversación, cada momento que compartimos, nos acerca más. Sé que estamos construyendo algo, se siente.</p>
+            <p>Xime, me gustas tal y como eres. Con todo, con tus bromas, con tus comentarios, con tu forma de ser. Me gustas cuando estás feliz, cuando estás seria, cuando me tiras hate y cuando no. Me gustas por todo lo que eres, y por todo lo que creo que podemos llegar a ser juntos.</p>
+            <p>No quiero que sientas que tienes que cambiar nada. Al contrario, quiero que sigas siendo tú misma, siempre. Y yo haré lo mismo, seguiré siendo yo, con mis cosas, con mi manera de ver las cosas. Porque creo que, en esa autenticidad, en ser quienes realmente somos, es donde construimos algo verdadero.</p>
+            <p>No importa si hoy no tenemos una etiqueta como tal para lo que somos. No importa si aún no podemos decir que somos "oficiales". Lo que importa es que estamos aquí, juntos, construyendo algo real, algo que vale la pena. Y eso, para mí, es más que suficiente por ahora.</p>
+            <p>No me importa esperar, no me importa cuánto tiempo necesites. Lo que me importa es que sigamos eligiéndonos, que sigamos queriendo estar juntos. Estoy aquí, con paciencia, con cariño. Y aunque no sé lo que el futuro venga para ambos, sé que estoy dispuesto a estar contigo siempre, paso a paso, sin prisa, pero sin pausa.</p>
+            <p>Gracias por ser tú, por dejarme conocerte, por cada momento compartido. Gracias por estar en mi vida, y por dejarme estar en la tuya. Te prometo que estaré aquí, a tu lado, siempre que me necesites, siempre que quieras compartir algo conmigo. Porque, Xime, me gustas muchísimo, y no hay nada que me haga más feliz que la idea de poder llegar a ser algo más.</p>
+            <div class="signature-container">
+                <div class="signature">Con todo mi cariño,<br>Tu mugroso</div>
+            </div>
+        </div>
+
+        <!-- Segunda carta -->
+        <div id="letter2" class="letter-container" style="display: none;">
+            <h2>09 de Septiembre de 2024</h2>
+            <p>Eeeey,</p>
+            <p>Te quería escribir una carta como la otra vez, pero aquí no tengo mi compu, así que te la escribo por aquí y luego la pondré en la página para tenerlas todas juntas.</p>
+            <p>Así que bueno, otra vez yo y mis cartas digitales, ¡perdón! Pero tengo tanto tiempo libre aquí que no puedo evitar escribirte. Hay cosas que no te dije en la carta anterior y algunas que tal vez suenen repetitivas, pero siento que necesito escribirlas.</p>
+            <p>No sé ni por dónde empezar, la verdad. Desde la última carta han pasado solo 3 semanas, pero siento que me quedé con cosas por decirte. No es que no piense en ti, todo lo contrario. Estás en mi mente cada segundo, pienso en tu carita, en esos ojitos bonitos que tienes, en la forma en que te haces tu delineado, y en todos los pequeños detalles que has hecho por mí que no hacen más que acercarme más a ti. Y, por supuesto, en tu único e inigualable “mugroso”.</p>
+            <p>Ya casi van 3 meses desde que empezamos a hablar, desde que la vida nos juntó (sigo creyendo que fue un amarre tuyo, o quién sabe), y la verdad es que cada cosa que haces, cada gesto, me hace sentir que este es el lugar correcto para mí, que contigo es donde debo estar. Es como si nos conociéramos de toda la vida, como si habláramos el mismo idioma, aunque sé que el tuyo tiene 13 variantes de "no", que poco a poco voy aprendiendo.</p>
+            <p>Amo ser yo contigo, Xime. Amo poder ser auténtico, sin máscaras, sin pretender ser alguien que no soy, y me encantaría que tú también te sintieras así conmigo. Que sintieras esa misma comodidad que siento cuando estoy contigo. Me matan tus bromas, tus chistes, tus comentarios sarcásticos. Y aunque a veces te escondas detrás de ese escudo, yo veo tu corazón gigante y a la vez tan frágil, lo que me hace sentir que estoy con la persona indicada.</p>
+            <p>Ahora bien, la verdad, en estas últimas semanas, no te mentiré, han sido muy difíciles para mí, Xime. Sé que tú también has tenido días malos, y aun así has estado para mí, y yo he tratado de estar para ti. Lo agradezco mucho. Con lo de mi mamá, el no tener trabajo, y un montón de cosas más, he perdido las ganas de hacer cosas que antes disfrutaba, como ir al gimnasio. Antes siempre encontraba una excusa para ir, pero estas semanas, nada. Pero sé que estás tú, como mi rayito de sol. Hablar contigo, aunque sea por mensaje, que sé que no es lo mismo, para nada lo mismo, pero al menos me ayuda a seguir adelante. Un “mugroso” tuyo, un “yo también” cuando te digo que te extraño, me llenan el alma. Porque de verdad te extraño: tu risa, tus ocurrencias, tus chismes, tus caras, hasta tu forma de caminar.</p>
+            <p>Y sí, lo confieso, muchas veces me gana el pánico. Pienso en el tiempo que pasa y en que, tal vez, en este tiempo pueda pasar algo, que tal vez conozcas a alguien, y que ni siquiera pueda reclamar nada porque oficialmente "no somos nada", pero a la vez, tú eres mi todo. Puede sonar cursi, loco, pero definitivamente eres mi twin y nunca quiero perderte.</p>
+            <p>Está de más decirte que, si quisieras, puedes reclamarme lo que quieras, ¡JAJAJA! Puedes pedirme lo que sea, porque de mi parte para ti hay todo, todito.</p>
+            <p>Así que, no sé qué piensas, qué sientes. No te sientas presionada a decirme lo mismo ni a corresponder a mis locuras. Solo quiero que sepas que eres importante para mí, que le das color a mis días grises. Y que pase lo que pase, siempre guardaré un lugar especial para ti en mi corazón.</p>
+            <p>Te mando un abrazo gigante, de esos que te dejan sin aire.</p>
+            <div class="signature-container">
+                <div class="signature">Con todo mi cariño,<br>El mugres</div>
+            </div>
         </div>
     </div>
 
     <!-- Contenedor para los corazones flotantes -->
     <div id="hearts-container"></div>
 
-    <script src="scripts.js"></script>
+    <script>
+    function showLetter(letterId) {
+        const letters = document.querySelectorAll('.letter-container');
+        letters.forEach(letter => letter.style.display = 'none');
+        document.getElementById(letterId).style.display = 'block';
+    }
+
+    // Crear corazones flotantes
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.innerText = '❤';
+        heart.style.left = Math.random() * 100 + 'vw'; // Posición horizontal aleatoria
+        heart.style.animationDuration = Math.random() * 2 + 3 + 's'; // Duración de animación aleatoria
+
+        document.getElementById('hearts-container').appendChild(heart);
+
+        // Eliminar el corazón después de que termine la animación
+        setTimeout(() => {
+            heart.remove();
+        }, 5000);
+    }
+
+    // Crear corazones flotantes a intervalos regulares
+    setInterval(createHeart, 1000);
+    </script>
 </body>
 </html>

@@ -1,21 +1,14 @@
 // scripts.js
-function loadLetter(url) {
-    const iframe = document.getElementById('content-frame');
-    iframe.classList.add('fade-out');  // Añade la clase de salida
-    setTimeout(() => {
-        iframe.src = url;
-        iframe.classList.remove('fade-out'); // Elimina la clase después del cambio
-    }, 500);
-}
 
-// Para agregar animación de entrada y salida
-document.addEventListener('DOMContentLoaded', () => {
-    const iframe = document.getElementById('content-frame');
-    iframe.onload = () => {
-        iframe.classList.add('fade-in');  // Añade clase de entrada
-        setTimeout(() => iframe.classList.remove('fade-in'), 500);  // Elimina la clase después de la animación
-    };
-});
+// Función para cargar el contenido de la carta en el contenedor
+function loadLetter(url) {
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('letter-content').innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar la carta:', error));
+}
 
 // Función para crear corazones flotantes
 function createHeart() {
@@ -35,3 +28,8 @@ function createHeart() {
 
 // Crear corazones flotantes a intervalos regulares
 setInterval(createHeart, 1000);
+
+// Ajustar la altura del contenedor de la carta
+document.addEventListener('DOMContentLoaded', () => {
+    loadLetter('carta-18-agosto-2024.html'); // Cargar la carta inicial por defecto
+});
