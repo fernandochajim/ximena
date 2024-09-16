@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fecfef);
+    color: #4a4a4a;
+    line-height: 1.8;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Alex Brush', cursive;
+    color: #e91e63;
+    margin: 0;
+    font-size: 36px;
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 48px;
+    }
+}
+
+@keyframes textGlow {
+    from { text-shadow: 0 0 10px #e91e63; }
+    to { text-shadow: 0 0 20px #ff6f91; }
+}
+
+.menu {
+    margin: 20px 0;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    font-size: 18px;
+    color: #e91e63;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 2px solid #e91e63;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #e91e63;
+    color: white;
+    transform: scale(1.05);
+}
+
+.content {
+    width: 100%;
+    margin-top: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 70vh;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.letter-container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1.5s ease-out;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+h2 {
+    font-family: 'Alex Brush', cursive;
+    color: #ff6f91;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 36px;
+    }
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    text-align: justify;
+}
+
+.signature-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.signature {
+    font-family: 'Alex Brush', cursive;
+    font-size: 24px;
+    color: #e91e63;
+    white-space: pre;
+}
+
+@media (max-width: 600px) {
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    iframe {
+        height: 60vh;
+    }
+}
+
+/* Estilos para los corazones flotantes */
+.heart {
+    position: absolute;
+    color: #ff6f91;
+    font-size: 24px;
+    opacity: 0.7;
+    animation: float 6s ease-in-out infinite;
+    pointer-events: none; /* Para evitar que los corazones interfieran con los clics */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-20px) scale(1.1);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.7;
+    }
+}
